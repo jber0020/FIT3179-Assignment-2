@@ -1,0 +1,12 @@
+.vis-container {
+	width: 100%
+}
+
+.page {
+	width: 1024px;
+    margin: auto;
+    padding: 50px;
+    padding-top: 10px;
+    font-family: 'Trebuchet MS', sans-serif;
+    background-color: white;
+}
