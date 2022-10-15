@@ -70,69 +70,7 @@
               {"field": "QualityOfLifeIndex", "type": "quantitative", "title": "Quality of Life Index"}
             ]
           }
-        },
-        {
-          "transform": [
-            {
-              "window": [{"op": "rank", "as": "ranking"}],
-              "sort": [{"field": "QualityOfLifeIndex", "order": "descending"}]
-            },
-            {
-              "filter": "datum.ranking == 1"
-            },
-            {
-              "calculate": "'The country with; the best quality; of life is:;Switzerland'",
-              "as": "text1_raw"
-            },
-            {
-              "calculate": "split(datum.text1_raw, ';')",
-              "as": "text1"
-            }
-          ],
-          
-          "mark": {
-            "type": "text",
-            "align": "center",
-            "dx": -70,
-            "dy": -130,
-            "baseline": "middle",
-            "fontStyle": "bold"
-          },
-          "encoding": {
-            "text": {"field": "text1"}
-          }
-        },
-        {
-          "transform": [
-            {
-              "window": [{"op": "rank", "as": "ranking"}],
-              "sort": [{"field": "QualityOfLifeIndex", "order": "ascending"}]
-            },
-            {
-              "filter": "datum.ranking == 1"
-            },
-            {
-              "calculate": "'The country with; the worst quality; of life is:;Ghana'",
-              "as": "text2_raw"
-            },
-            {
-              "calculate": "split(datum.text2_raw, ';')",
-              "as": "text2"
-            }
-          ],
-          "mark": {
-            "type": "text",
-            "align": "center",
-            "dx": -30,
-            "dy": 0,
-            "baseline": "middle",
-            "fontStyle": "bold"
-          },
-          "encoding": {
-            "text": {"field": "text2"}
-          }
-        }
-         
+        }  
     ]
       
     }

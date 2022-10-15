@@ -1,10 +1,15 @@
 <!DOCTYPE html>
-<html style="background-color:darkolivegreen">
+<html style="background-color:#2F3E46">
     <head>
         <!-- Imports-->
         <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
         <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
         <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+
+        <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
+        integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
         <!--CSS-->
         <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
 
@@ -13,8 +18,42 @@
     <body class="main">
         <div class="page">
         <h1 style="text-align: center;">Where Should You Live?</h1>
-        <p style="text-align: center;">Insert Paragraph Here.</p>
-        <h2 style="text-align: center;">Quality Of Life Index 2020</h1>
+        
+        <hr>
+        <div class="pure-g">
+            <div class="pure-u-1-2">
+                <h3 style="text-align: center;">Contents</h3>
+                <li>
+                    <a href="#introduction">Introduction</a>
+                </li>
+                <li>
+                    <a href="#quality_of_life">Quality of Life</a>
+                </li>
+                <li>
+                    <a href="#happiness">Happiness</a>
+                </li>
+                <li>
+                    <a href="#healthcare">Life Expectancy</a>
+                </li>
+                <li>
+                    <a href="#cost_of_living">Cost of Living</a>
+                </li>
+                <li>
+                    <a href="#political_leaning">Political Leaning</a>
+                </li>
+                <li>
+                    <a href="#conclusion">Conclusion</a>
+                </li>
+            </div>
+            <div class="pure-u-1-2">
+                <h2 style="text-align: center;", id="introduction">Introduction</h2>
+                <p style="text-align: center;">Insert Paragraph Here.</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <h2 style="text-align: center;" id="quality_of_life">Quality Of Life</h2>
         <div id="qol_map" class="vis-container"></div>
 
         <script type="text/javascript">
@@ -24,17 +63,54 @@
             }).catch(console.error)
         </script>
         <p style="text-align: center;">Insert Paragraph Here.</p>
-        <h2 style="text-align: center;">World Happiness Report 2020</h1>
 
-        <div id="happiness" class="vis-container"></div>
+        <hr>
 
-        <script type="text/javascript">
-            var spec2 = "js/happiness.vg.json";
-            vegaEmbed('#happiness', spec2).then(function(result) {
+        <h2 style="text-align: center;" id="happiness">Happiness</h2>
+        <div class="pure-g">
+        <div class="pure-u-1-2">
+            <div id="happinesschart" class="vis-container"></div>
 
-            }).catch(console.error)
-        </script>
-        <p style="text-align: center;">Insert Paragraph Here.</p>
-        
+            <script type="text/javascript">
+                var spec2 = "js/happiness.vg.json";
+                vegaEmbed('#happinesschart', spec2).then(function(result) {
+
+                }).catch(console.error)
+            </script>
+        </div>
+        <div class="pure-u-1-2">
+            <div class="description description-right" style="font-family: 'Trebuchet MS', sans-serif;">
+                <p>Insert Paragraph Here.</p>
+            </div>
+        </div>
+        </div>
+
+        <hr>
+
+        <h2 style="text-align: center;" id="healthcare">Life Expectancy</h2>
+
+        <hr>
+
+        <h2 style="text-align: center;" id="cost_of_living">Cost of Living</h2>
+
+        <hr>
+
+        <h2 style="text-align: center;" id="political_leaning">Political Leaning</h2>
+
+        <hr>
+
+        <h2 style="text-align: center;" id="conclusion">Conclusion</h2>
+
+        <hr>
+
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="font-family: 'Trebuchet MS', sans-serif;">
+                <p>Author: Joshua Berg</p>
+            </div>
+            <div class="pure-u-1-2" style="text-align: right; font-family: 'Trebuchet MS', sans-serif;">
+                <p>October, 2022</p>
+            </div>
+        </div>
+        </div>
     </body>
 </html>
