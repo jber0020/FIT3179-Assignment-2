@@ -5,7 +5,7 @@
     "projection": {"type": "equalEarth"},
     "config": {"font": "Trebuchet MS"},
     "data": {
-      "url": "https://raw.githubusercontent.com/jber0020/FIT3179-HW-Week-10/main/data/countries_quality_of_life_index.18-10-2021.csv"
+      "url": "https://raw.githubusercontent.com/jber0020/FIT3179-Assignment-2/main/data/countries_quality_of_life_index.18-10-2021.csv"
     },
     "layer":[
       {

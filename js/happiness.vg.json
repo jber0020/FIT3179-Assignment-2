@@ -1,7 +1,7 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "data": {
-        "url": "https://raw.githubusercontent.com/jber0020/FIT3179-HW-Week-10/main/data/WHR20_DataForFigure2.1.csv"
+        "url": "https://raw.githubusercontent.com/jber0020/FIT3179-Assignment-2/main/data/WHR20_DataForFigure2.1.csv"
     },
     "config": {"font": "Trebuchet MS"},
     "params": [{"name": "region_select",
