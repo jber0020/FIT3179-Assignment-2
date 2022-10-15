@@ -49,7 +49,7 @@
                 "tooltip": [
                     {"field": "Country name", "title": "Country"},
                     {"field": "Regional indicator", "title": "Region"},
-                    {"field": "Ladder score", "title": "Score"}
+                    {"field": "Ladder score", "title": "Score", "format": ".2f"}
                 ]
             },
             "transform": [

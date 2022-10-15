@@ -4,24 +4,35 @@
         "url": "https://raw.githubusercontent.com/jber0020/FIT3179-Assignment-2/main/data/life_expectancy.csv"
     },
     "transform": [
-        {"filter": {"field": "2020", "range": [50, 90]}}
+        {"filter": {"field": "2020", "range": [50, 90]}},
+        {
+            "calculate": "ceil(datum[2020])",
+            "as": "place"
+        },
+        {
+            "window": [{"op": "rank", "as": "id"}],
+            "groupby": ["place"]
+          }
     ],
     "width": "container",
-    "height": 75,
+    "height": 120,
     "mark": {
         "type": "circle",
-        "opacity": 0.5,
+        "opacity": 0.75,
         "color": "#3A5A40"
     },
     "encoding": {
       "x": {"field": "2020",
             "type": "quantitative", 
             "title": "Life Expectancy (Years)",
-            "scale": {"domain": [53, 86]}
+            "scale": {"domain": [53, 86]},
+            "bin": {"divide": [1], "step": 1},
+            "axis": {"format": ".0f"}
             },
+      "y": {"field": "id", "type": "ordinal", "axis": null, "sort": "descending"},
       "tooltip": [
         {"field": "Country Name"},
-        {"field": "2020", "title": "Life Expectancy"}
+        {"field": "2020", "title": "Life Expectancy", "format": ".2f"}
       ]
   }
 }
