@@ -45,7 +45,7 @@
                 "x": {"field": "Ladder score", "type": "quantitative", "title": "Score"},
                 "y": {"field": "Country name", "type": "nominal", 
                       "sort": {"field": "Ladder Score", "order": "descending"}, 
-                      "title": "Country"},
+                      "title": " "},
                 "tooltip": [
                     {"field": "Country name", "title": "Country"},
                     {"field": "Regional indicator", "title": "Region"},
