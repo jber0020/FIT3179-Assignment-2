@@ -32,7 +32,7 @@
             "encoding": {
                 "x": {"field": "Year", "type": "quantitative"},
                 "y" :{"field": "egaldem_vdem_owid", "type": "quantitative", "title": "Democratic Index", "scale": {"zero":false}},
-                "color": {"field": "Entity", "scale": {"scheme": "category20b"}, "title": "Country"},
+                "color": {"field": "Entity", "scale": {"scheme": "category20b"}, "title": "Country", "legend": {"title": "Select a Country"}},
                 "opacity": {"condition": {
                     "selection": "country_highlight", "value": 1
                 }, "value": 0.15}
@@ -52,7 +52,7 @@
             "encoding": {
                 "x": {"field": "Year", "type": "quantitative", "axis": {"format": ""}, "title": ""},
                 "y" :{"field": "egaldem_vdem_owid", "type": "quantitative", "title": "Democratic Index", "scale": {"zero":false}},
-                "color": {"field": "Entity", "scale": {"scheme": "category20b"}, "title": "Country"},
+                "color": {"field": "Entity", "scale": {"scheme": "category20b"}, "title": "Country", "legend": {"title": "Select a Country"}},
                 "tooltip": [
                     {"field": "Entity", "title": "Country"},
                     {"field": "Year"},
