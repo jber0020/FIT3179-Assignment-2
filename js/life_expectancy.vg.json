@@ -3,6 +3,7 @@
     "data": {
         "url": "https://raw.githubusercontent.com/jber0020/FIT3179-Assignment-2/main/data/life_expectancy.csv"
     },
+    "config": {"font": "Trebuchet MS"},
     "transform": [
         {"filter": {"field": "2020", "range": [50, 90]}},
         {
