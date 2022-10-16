@@ -1,0 +1,79 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+        "url": "https://raw.githubusercontent.com/jber0020/FIT3179-Assignment-2/main/data/democracy.csv"
+    },
+    "width": "container",
+    "height": 400,
+    "params": [
+        {
+            "name": "year_filter",
+            "value": 2000,
+            "bind": {
+                "input": "range",
+                "min": 1900,
+                "max": 2021,
+                "step": 1,
+                "name": "Min. Year: "
+            }
+        },
+        {
+            "name": "region_select",
+            "bind": {"input": "select",
+                     "labels": [
+                        "Americas",
+                        "Western Europe",
+                        "Eastern Europe",
+                        "Oceania",
+                        "Eastern Asia",
+                        "Southeast Asia",
+                        "Middle East",
+                        "Africa"
+                     ],
+                     "options": [
+                        ["Canada", "United States"],
+                        ["United Kingdom", "Ireland", "Portugal", "Spain", "France", "Belgium", "Netherlands"],
+                        [],
+                        ["Australia", "New Zealand", "Papua New Guinea"],
+                        [],
+                        [],
+                        [],
+                        []
+                     ],
+                     "name": "Region: "}
+        }
+    ],
+    "transform": [
+        {"filter": "datum.Year >= year_filter"},
+        {"filter": {"field": "Entity", "oneOf": ["United States", "Canada", "United Kingdom", "Australia", "New Zealand", "Japan"]}}
+    ],
+    "layer": [
+        {
+            "mark": {
+                "type": "line",
+                "opacity": 0.75
+            },
+            "encoding": {
+                "x": {"field": "Year", "type": "quantitative"},
+                "y" :{"field": "egaldem_vdem_owid", "type": "quantitative", "title": "Democratic Index"},
+                
+                "stroke": {"field": "Entity"}
+            }
+        },
+        {
+            "mark" :{
+                "type": "point"
+            },
+            "encoding": {
+                "x": {"field": "Year", "type": "quantitative"},
+                "y" :{"field": "egaldem_vdem_owid", "type": "quantitative"},
+                "stroke": {"field": "Entity"},
+                "tooltip": [
+                    {"field": "Entity", "title": "Country"},
+                    {"field": "Year"},
+                    {"field": "egaldem_vdem_owid", "title": "Democratic Index"}
+                ]
+            }
+        }
+    ]
+}

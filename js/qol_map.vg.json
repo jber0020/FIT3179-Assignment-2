@@ -2,10 +2,55 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": "container",
     "height": 550,
-    "projection": {"type": "equalEarth"},
     "config": {"font": "Trebuchet MS"},
     "data": {
       "url": "https://raw.githubusercontent.com/jber0020/FIT3179-Assignment-2/main/data/countries_quality_of_life_index.18-10-2021.csv"
+    },
+    "params": [
+      {
+        "name": "region_select",
+        "value": [0, 0],
+        "bind": {
+          "input": "select",
+          "options": [
+            [0, 0],
+            [30, 50],
+            [-100, 40],
+            [-70, -20],
+            [10, 0],
+            [120, -20],
+            [90, 30],
+            [40, 30]
+          ],
+          "labels": [
+            "World",
+            "Europe",
+            "North America",
+            "South America",
+            "Africa",
+            "Oceania",
+            "Asia",
+            "Middle East"
+          ],
+          "name": "Center: "
+          }
+        },
+        {
+          "name": "zoom_level",
+          "value": 180,
+          "bind": {
+            "input": "range",
+            "min": 180,
+            "max": 1000,
+            "step": 10,
+            "name": "Zoom: "
+          }
+        }
+    ],
+    "projection": {
+      "type": "equalEarth",
+      "center": { "expr": "region_select"},
+      "scale": {"expr": "zoom_level"}
     },
     "layer":[
       {
@@ -63,7 +108,7 @@
                 "scheme": "greens"
               },
               "title": "Quality of Life Index",
-              "legend": {"orient": "bottom", "cornerRadius": 10, "gradientLength": 400}
+              "legend": {"orient": "bottom-right", "cornerRadius": 10, "gradientLength": 400, "titleOrient": "top", "titleAnchor": "end", "direction": "horizontal", "titleFont": "Trebuchet MS"}
             },
             "tooltip": [
               {"field": "properties.NAME", "type": "nominal", "title": "Country"},

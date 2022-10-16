@@ -1,0 +1,42 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+        "url": "https://raw.githubusercontent.com/jber0020/FIT3179-Assignment-2/main/data/Cost_of_Living_Index_2022.csv"
+    },
+    "width": "container",
+    "height": 300,
+    "transform": [
+        {
+            "lookup": "Country",
+            "from": {
+                "data": {
+                    "url": "https://raw.githubusercontent.com/jber0020/FIT3179-Assignment-2/main/data/income.csv",
+                    "format": {
+                        "type": "csv"
+                    }
+                },
+                "key": "country",
+                "fields": ["medianIncome"]
+            },
+            "as": "medianIncome"
+        }
+    ],
+    "mark": {"type": "circle",
+             "color": "#52796F"},
+    "encoding": {
+        "x": {
+            "field": "medianIncome",
+            "type": "quantitative",
+            "title": "Median Income"
+        },
+        "y": {
+            "field": "Cost of Living Index",
+            "type": "quantitative"
+        },
+        "tooltip": [
+            {"field": "Country"},
+            {"field": "medianIncome", "title": "Median Income"},
+            {"field": "Cost of Living Index"}
+        ]
+    }
+}

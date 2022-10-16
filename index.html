@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html style="background-color:#2F3E46">
+<html style="background-color:#324a3f">
     <head>
         <!-- Imports-->
         <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
@@ -21,9 +21,9 @@
         
         <hr>
         <div class="pure-g">
-            <div class="pure-u-1-2">
-                <h3 style="text-align: center;">Contents</h3>
-                <div style="margin-left: 40%;">
+            <div class="pure-u-1-3">
+                <div id="toc">
+                <h2 style="text-align: center;">Contents</h2>
                 <li>
                     <a href="#introduction">Introduction</a>
                 </li>
@@ -40,16 +40,19 @@
                     <a href="#cost_of_living">Cost of Living</a>
                 </li>
                 <li>
-                    <a href="#political_leaning">Political Leaning</a>
+                    <a href="#political_leaning">Level of Democracy</a>
                 </li>
                 <li>
                     <a href="#conclusion">Conclusion</a>
                 </li>
                 </div>
             </div>
-            <div class="pure-u-1-2">
+            <div class="pure-u-1-3">
                 <h2 style="text-align: center;", id="introduction">Introduction</h2>
                 <p style="text-align: center;">Insert Paragraph Here.</p>
+            </div>
+            <div class="pure-u-1-3">
+                <p style="text-align: center; padding-top: 52px;">Insert Paragraph Here.</p>
             </div>
         </div>
 
@@ -64,7 +67,17 @@
 
             }).catch(console.error)
         </script>
-        <p style="text-align: center;">Insert Paragraph Here.</p>
+         <div class="pure-g">
+            <div class="pure-u-1-3">
+                <p>Insert Paragraph Here.</p>
+            </div>
+            <div class="pure-u-1-3">
+                <p>Insert Paragraph Here.</p>
+            </div>
+            <div class="pure-u-1-3">
+                <p>Insert Paragraph Here.</p>
+            </div>
+            </div>
 
         <hr>
 
@@ -115,13 +128,57 @@
 
         <h2 style="text-align: center;" id="cost_of_living">Cost of Living</h2>
 
+        <div class="pure-g">
+            <div class="pure-u-1-2">
+                <p>Insert Paragraph Here.</p>
+            </div>
+            <div class="pure-u-1-2">
+                <div id="costchart" class="vis-container"></div>
+
+                <script type="text/javascript">
+                    var spec2 = "js/cost.vg.json";
+                    vegaEmbed('#costchart', spec2).then(function(result) {
+
+                    }).catch(console.error)
+                </script>
+            </div>
+        </div>
+
         <hr>
 
-        <h2 style="text-align: center;" id="political_leaning">Political Leaning</h2>
+        <h2 style="text-align: center;" id="political_leaning">Level of Democracy</h2>
+
+        <div class="pure-g">
+            <div class="pure-u-1-2">
+                <div id="demchart" class="vis-container"></div>
+
+                <script type="text/javascript">
+                    var spec2 = "js/democracy.vg.json";
+                    vegaEmbed('#demchart', spec2).then(function(result) {
+
+                    }).catch(console.error)
+                </script>
+            </div>
+            <div class="pure-u-1-2">
+                <p>Insert Paragraph Here.</p>
+            </div>
+        </div>
 
         <hr>
 
         <h2 style="text-align: center;" id="conclusion">Conclusion</h2>
+
+        <div class="pure-g">
+            <div class="pure-u-1-3">
+                <p>Insert Paragraph Here.</p>
+            </div>
+            <div class="pure-u-1-3">
+                <p>Insert Paragraph Here.</p>
+            </div>
+            <div class="pure-u-1-3">
+                <p>Insert Paragraph Here.</p>
+            </div>
+            </div>
 
         <hr>
 

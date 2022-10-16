@@ -19,7 +19,8 @@
     "mark": {
         "type": "circle",
         "opacity": 0.75,
-        "color": "#3A5A40"
+        "color": "#3A5A40",
+        "size": 50
     },
     "encoding": {
       "x": {"field": "2020",

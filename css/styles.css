@@ -11,6 +11,28 @@
     background-color: white;
 }
 
-.li {
-    text-align: center;
+#toc {
+    background-color: #eaf0e6;
+    border: 1px solid #aaa;
+    display: table;
+    font-size: 95%;
+    padding: 30px;
+    width: auto;
+}
+
+#toc li {
+    list-style: outside none none !important;
+}
+
+a:link {
+    color: black;
+    text-decoration: none;
+}
+
+a:visited {
+    color: black;
+}
+
+a:hover {
+    color: purple;
 }
