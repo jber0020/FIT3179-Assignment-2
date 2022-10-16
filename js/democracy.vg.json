@@ -22,7 +22,7 @@
     ],
     "transform": [
         {"filter": "datum.Year >= year_filter"},
-        {"filter": {"field": "Entity", "oneOf": ["United States", "Canada", "United Kingdom", "Australia", "New Zealand", "Japan", "Germany", "France"]}}
+        {"filter": {"field": "Entity", "oneOf": ["United States", "Canada", "United Kingdom", "Australia", "New Zealand", "Japan", "Germany", "France", "South Korea"]}}
     ],
     "layer": [
         {
