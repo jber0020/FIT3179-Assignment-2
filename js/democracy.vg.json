@@ -5,6 +5,7 @@
     },
     "width": "container",
     "height": 400,
+    "title": {"fontSize": 14, "text": "Higher is Better"},
     "params": [
         {
             "name": "year_filter",
@@ -45,19 +46,18 @@
     ],
     "transform": [
         {"filter": "datum.Year >= year_filter"},
-        {"filter": {"field": "Entity", "oneOf": ["United States", "Canada", "United Kingdom", "Australia", "New Zealand", "Japan"]}}
+        {"filter": {"field": "Entity", "oneOf": ["United States", "Canada", "United Kingdom", "Australia", "New Zealand", "Japan", "Germany", "France"]}}
     ],
     "layer": [
         {
             "mark": {
                 "type": "line",
-                "opacity": 0.75
+                "opacity": 1
             },
             "encoding": {
                 "x": {"field": "Year", "type": "quantitative"},
-                "y" :{"field": "egaldem_vdem_owid", "type": "quantitative", "title": "Democratic Index"},
-                
-                "stroke": {"field": "Entity"}
+                "y" :{"field": "egaldem_vdem_owid", "type": "quantitative", "title": "Democratic Index", "scale": {"zero":false}},
+                "color": {"field": "Entity", "scale": {"scheme": "category20b"}, "title": "Country"}
             }
         },
         {
@@ -65,9 +65,9 @@
                 "type": "point"
             },
             "encoding": {
-                "x": {"field": "Year", "type": "quantitative"},
-                "y" :{"field": "egaldem_vdem_owid", "type": "quantitative"},
-                "stroke": {"field": "Entity"},
+                "x": {"field": "Year", "type": "quantitative", "axis": {"format": ""}, "title": ""},
+                "y" :{"field": "egaldem_vdem_owid", "type": "quantitative", "title": "Democratic Index", "scale": {"zero":false}},
+                "color": {"field": "Entity", "scale": {"scheme": "category20b"}, "title": "Country"},
                 "tooltip": [
                     {"field": "Entity", "title": "Country"},
                     {"field": "Year"},

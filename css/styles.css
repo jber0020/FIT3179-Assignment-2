@@ -18,6 +18,8 @@
     font-size: 95%;
     padding: 30px;
     width: auto;
+    border-radius: 5px;
+    line-height: 25px;
 }
 
 #toc li {
@@ -35,4 +37,8 @@ a:visited {
 
 a:hover {
     color: purple;
+}
+
+p {
+    padding-left: 10px; padding-right: 10px;
 }

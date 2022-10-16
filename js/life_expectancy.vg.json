@@ -19,7 +19,7 @@
     "mark": {
         "type": "circle",
         "opacity": 0.75,
-        "color": "#3A5A40",
+        "color": "#9f86c0",
         "size": 50
     },
     "encoding": {

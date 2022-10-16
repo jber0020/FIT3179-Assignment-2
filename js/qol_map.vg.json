@@ -6,6 +6,7 @@
     "data": {
       "url": "https://raw.githubusercontent.com/jber0020/FIT3179-Assignment-2/main/data/countries_quality_of_life_index.18-10-2021.csv"
     },
+    "title": {"fontSize": 14, "text": "Darker is Better"},
     "params": [
       {
         "name": "region_select",
@@ -108,7 +109,16 @@
                 "scheme": "greens"
               },
               "title": "Quality of Life Index",
-              "legend": {"orient": "bottom-right", "cornerRadius": 10, "gradientLength": 400, "titleOrient": "top", "titleAnchor": "end", "direction": "horizontal", "titleFont": "Trebuchet MS"}
+              "legend": {"orient": "none", 
+                        "cornerRadius": 10, 
+                        "gradientLength": 400, 
+                        "titleOrient": "top", 
+                        "titleAnchor": "end", 
+                        "direction": "horizontal", 
+                        "titleFont": "Trebuchet MS",
+                        "legendX": 570,
+                        "legendY": 505
+                      }
             },
             "tooltip": [
               {"field": "properties.NAME", "type": "nominal", "title": "Country"},
