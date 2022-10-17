@@ -14,7 +14,7 @@
             "bind": {
                 "input": "range",
                 "min": 1900,
-                "max": 2021,
+                "max": 2020,
                 "step": 1,
                 "name": "Min. Year: "
             }
@@ -22,7 +22,7 @@
     ],
     "transform": [
         {"filter": "datum.Year >= year_filter"},
-        {"filter": {"field": "Entity", "oneOf": ["United States", "Canada", "United Kingdom", "Australia", "New Zealand", "Japan", "Germany", "France", "South Korea"]}}
+        {"filter": {"field": "Entity", "oneOf": ["Denmark", "Norway", "Sweden", "Switzerland", "Luxembourg", "Belgium", "Costa Rica", "Germany", "Estonia", "Ireland"]}}
     ],
     "layer": [
         {
@@ -30,7 +30,7 @@
                 "type": "line"
             },
             "encoding": {
-                "x": {"field": "Year", "type": "quantitative"},
+                "x": {"field": "Year", "type": "quantitative", "axis": {"format": "d"}},
                 "y" :{"field": "egaldem_vdem_owid", "type": "quantitative", "title": "Democratic Index", "scale": {"zero":false}},
                 "color": {"field": "Entity", "scale": {"scheme": "category20b"}, "title": "Country", "legend": {"title": "Select a Country"}},
                 "opacity": {"condition": {

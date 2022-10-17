@@ -42,7 +42,8 @@
             "height": 550,
             "mark": {"type": "bar", "cornerRadius": 5, "color": "#84A98C"},
             "encoding": {
-                "x": {"field": "Ladder score", "type": "quantitative", "title": "Score"},
+                "x": {"field": "Ladder score", "type": "quantitative", "title": "Score",
+                      "scale": {"domain": [0, 8]}},
                 "y": {"field": "Country name", "type": "nominal", 
                       "sort": {"field": "Ladder Score", "order": "descending"}, 
                       "title": " "},

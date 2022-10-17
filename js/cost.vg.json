@@ -6,7 +6,7 @@
     "config": {"font": "Trebuchet MS"},
     "width": "container",
     "title": {"fontSize": 14, "text": "Lower is Better, Further Right is Better"},
-    "height": 300,
+    "height": 400,
     "transform": [
         {
             "lookup": "Country",
