@@ -39,7 +39,7 @@
         {
             "title": "Top 10 Countries",
             "width": 364,
-            "height": 550,
+            "height": 500,
             "mark": {"type": "bar", "cornerRadius": 5, "color": "#84A98C"},
             "encoding": {
                 "x": {"field": "Ladder score", "type": "quantitative", "title": "Score",

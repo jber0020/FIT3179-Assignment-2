@@ -5,7 +5,7 @@
     },
     "config": {"font": "Trebuchet MS"},
     "width": "container",
-    "height": 400,
+    "height": 380,
     "title": {"fontSize": 14, "text": "Higher is Better"},
     "params": [
         {
