@@ -29,7 +29,7 @@
         "x": {
             "field": "medianIncome",
             "type": "quantitative",
-            "title": "Median Income (Internation Dollars)"
+            "title": "Median Income (International Dollars)"
         },
         "y": {
             "field": "Cost of Living Index",
